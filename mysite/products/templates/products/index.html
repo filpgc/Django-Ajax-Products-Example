@@ -1,0 +1,38 @@
+<!-- Dom-->
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ appname }}</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/styles.css' %}" />
+
+</head>
+
+<body>
+    <h1>Products</h1>
+    <div id="productlist"></div>
+    <br>
+    <input type="button" id='details' value="View Details">
+    <br>
+    <br>
+    <input type="text" value='Name' id='name' name='Name'>
+    <br>
+    <input textarea rows="3" cols="30" id='description' value='Description' maxlength="250" name="Description">
+    <br>
+    <input type="text"  name='Price' value="0.00" id='price'>
+    <br>
+    <br>
+    <input type="button" name="add" id='add' value="Add Product">
+    <input type="button" name="update" id='update' value="Update Product">
+    <input type="button" name="delete" id='delete' value="Delete Product">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'mainapp/scripts.js' %}"></script>
+
+</body>
+
+</html>
